@@ -30,16 +30,16 @@
     groups: kvm,disk
     append: yes
 
-- name: Configure /etc/sudoers.
-  template:
-    src: sudoers
-    dest: /etc/sudoers
-    owner: root
-    group: root
-    mode: 0440
-    validate: visudo -cf %s
-  tags:
-    - sudoers
+#- name: Configure /etc/sudoers.
+#  template:
+#    src: sudoers
+#    dest: /etc/sudoers
+#    owner: root
+#    group: root
+#    mode: 0440
+#    validate: visudo -cf %s
+#  tags:
+#    - sudoers
 
 - name: Configure /etc/security/limits.conf
   template:
